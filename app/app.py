@@ -10,8 +10,9 @@ def get_db():
 @app.route('/')
 def index():
     return jsonify({
-        'message': 'Bienvenue sur l\'API !',
-        'env': os.environ.get('APP_ENV', 'unknown')
+        'message': 'API v1.1.0 — nouvelle fonctionnalité !',
+        'version': '1.1.0',
+        'env': os.environ.get('APP_ENV')
     })
 
 @app.route('/health')
